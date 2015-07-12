@@ -1,0 +1,42 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id = "main" style="display:none">
+    <div id = "date">
+      12 Thu
+      2015yean7month
+    </div>
+    <div id = "setting">
+      setting
+    </div>
+    <div>
+      1 2 3 4 5 6 .... 29
+    </div>
+    <div id="weekAgo">
+      a week ago
+    </div>
+    <div id="monthAgo">
+      a month ago
+    </div>
+    <div id="yearAgo">
+      a year ago
+    </div>
+    </div>
+    <script>
+      localStorage["abc"] = 1
+      localStorage["def"] = 2
+      localStorage["ghi"] = 3
+      globalDate = new Date()
+      date = globalDate.getDate()
+      day = globalDate.getDay()
+      year = globalDate.getYear()
+      month = globalDate.getMonth()
+      document.getElementById("date").innerText = date + "hao xinqi" + day + " " + (year + 1900) + "nian " + (month + 1) + "yue"
+      document.getElementById("main").style.display="block"
+      document.getElementById("weekAgo").innerText += localStorage["abc"]
+      document.getElementById("monthAgo").innerText += localStorage["def"]
+      document.getElementById("yearAgo").innerText += localStorage["ghi"]
+    </script>
+  </body>
+</html>
