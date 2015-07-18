@@ -23,20 +23,7 @@
       a year ago
     </div>
     </div>
-    <script>
-      localStorage["abc"] = 1
-      localStorage["def"] = 2
-      localStorage["ghi"] = 3
-      globalDate = new Date()
-      date = globalDate.getDate()
-      day = globalDate.getDay()
-      year = globalDate.getYear()
-      month = globalDate.getMonth()
-      document.getElementById("date").innerText = date + "hao xinqi" + day + " " + (year + 1900) + "nian " + (month + 1) + "yue"
-      document.getElementById("main").style.display="block"
-      document.getElementById("weekAgo").innerText += localStorage["abc"]
-      document.getElementById("monthAgo").innerText += localStorage["def"]
-      document.getElementById("yearAgo").innerText += localStorage["ghi"]
+    <script src="main.js">
     </script>
   </body>
 </html>
