@@ -14,18 +14,18 @@ function Time()
 
 function init()
 {
-    localStorage["abc"] = [{"family":["good","healthy"]},{"work":["good too", "up"]}]
-    localStorage["def"] = [{"family2":["good2","healthy2"]},{"work2":["good too2", "up2"]}]
-    localStorage["ghi"] = [{"family3":["good3","healthy3"]},{"work3":["good too3", "up3"]}]
+    localStorage["abc"] = "[{\"title\":\"family\", \"content\":\"good, healthy\",\"image\":\"/sdcard/a.jpg\"},{\"title\":\"family2\", \"content\":\"good, healthy\",\"image\":\"/sdcard/a.jpg\"}]"
+    localStorage["def"] = "[{\"title\":\"family\", \"content\":\"good, healthy\",\"image\":\"/sdcard/a.jpg\"},{\"title\":\"family\", \"content\":\"good, healthy4\",\"image\":\"/sdcard/a.jpg\"}]"
+    localStorage["ghi"] = "[{\"title\":\"family\", \"content\":\"good, healthy\",\"image\":\"/sdcard/a.jpg\"},{\"title\":\"family\", \"content\":\"good, healthy\",\"image\":\"/sdcard/a6.jpg\"}]"
 }
 
 function showDiary(ele, content)
 {
+    content = eval(content)
     for (var i in content)
     {
-
+        ele.innerHTML += content[i].title+"|" +content[i].content+"|"+content[i].image
     }
-    ele.innerHTML = content
 }
 
 
