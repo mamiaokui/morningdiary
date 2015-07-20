@@ -7,9 +7,21 @@ function Time()
     this.month = this.globalDate.getMonth()
     this.showTime = function(ele)
     {
-        //document.getElementById("date").innerText = date + "hao xinqi" + day + " " + (year + 1900) + "nian " + (month + 1) + "yue"
         ele.innerText = this.date + "hao xinqi" + this.day + " " + (this.year + 1900) + "nian " + (this.month + 1) + "yue"
     }
+
+    this.getDaysInMonth = function(y,m)
+    {
+        return /8|3|5|10/.test(--m)?30:m==1?(!(y%4)&&y%100)||!(y%400)?29:28:31;
+    }
+
+    this.getDay = function(y,m,d)
+    {
+        str = "" + y +"/"+m+"/"+d
+        d = new Date(str)
+        return d.getDay();
+    }
+    
 }
 
 function init()
